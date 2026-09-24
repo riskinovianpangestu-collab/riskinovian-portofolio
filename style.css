@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --bg:#07090d; --panel:#0d1118; --line:#202733; --text:#f3f6fb;
+  --muted:#9aa5b5; --accent:#6ee7b7; --accent2:#67e8f9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.navbar{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;z-index:20;background:rgba(7,9,13,.82);backdrop-filter:blur(14px)}
+.logo{font:700 28px "Space Grotesk";letter-spacing:-1px}.logo span,h1 span,h2 span{color:var(--accent)}
+nav{display:flex;gap:28px}nav a{font-size:14px;color:#b8c1cf;transition:.2s}nav a:hover{color:var(--accent)}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{min-height:calc(100vh - 76px);padding:100px 7%;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center;position:relative}
+.grid-bg{position:absolute;inset:0;opacity:.18;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:50px 50px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+.hero-content,.hero-card{position:relative;z-index:1}
+.eyebrow,.section-label{font-size:11px;letter-spacing:3px;color:var(--accent);font-weight:700}
+h1{font:700 clamp(55px,9vw,110px)/.95 "Space Grotesk";letter-spacing:-5px;margin:18px 0}
+.hero h2{font:600 clamp(24px,3vw,38px)/1.1 "Space Grotesk";margin-bottom:18px}
+.hero-text{max-width:650px;color:var(--muted);font-size:17px}
+.buttons{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:13px 20px;border-radius:8px;font-weight:700;font-size:14px;border:1px solid var(--line)}
+.primary{background:var(--accent);color:#06100c;border-color:var(--accent)}.secondary{background:#0d1118}
+.terminal{background:#090c11;border:1px solid #25303d;border-radius:14px;box-shadow:0 30px 90px rgba(0,0,0,.4);overflow:hidden}
+.terminal-top{padding:13px;border-bottom:1px solid #202630;display:flex;gap:7px}.terminal-top i{width:9px;height:9px;border-radius:50%;background:#4b5563}
+.terminal-body{padding:28px;font:14px/2 "SFMono-Regular",Consolas,monospace}.green{color:var(--accent)}.cyan{color:var(--accent2)}.muted{color:#687384}.status{color:var(--accent);font-weight:bold}
+.section{padding:105px 7%;border-top:1px solid rgba(255,255,255,.05)}
+.section h2{font:600 clamp(35px,5vw,58px)/1.05 "Space Grotesk";letter-spacing:-2px;margin:15px 0 45px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px}.two-col p{color:var(--muted);margin-bottom:18px}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill,.project{background:var(--panel);border:1px solid var(--line);padding:27px;border-radius:12px;transition:.25s}.skill:hover,.project:hover{transform:translateY(-5px);border-color:#394454}
+.skill b{color:var(--accent);font-size:12px}.skill h3{font:600 21px "Space Grotesk";margin:14px 0 7px}.skill p,.project p{color:var(--muted);font-size:14px}
+.timeline{border-left:1px solid #2a3440;margin-left:10px;padding-left:32px;display:grid;gap:45px}.timeline article{position:relative}.timeline article:before{content:"";position:absolute;left:-39px;top:6px;width:11px;height:11px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 5px var(--bg)}
+.date{font-size:10px;letter-spacing:2px;color:var(--accent)}.timeline h3{font:600 27px "Space Grotesk";margin:5px 0}.timeline p{color:#b3bdca}.timeline ul{margin-top:12px;padding-left:20px;color:var(--muted);font-size:14px}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.project-icon{font-size:32px;color:var(--accent);margin-bottom:25px}.project span{font-size:10px;letter-spacing:2px;color:#7d8998}.project h3{font:600 25px "Space Grotesk";margin:6px 0 10px}.project-btn{margin-top:20px;border:0;background:none;color:var(--accent);font-weight:700;cursor:pointer}
+.contact{background:linear-gradient(180deg,var(--bg),#0a1110)}.contact>p{color:var(--muted);max-width:600px}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}.contact-grid a{border:1px solid var(--line);background:var(--panel);padding:20px;border-radius:10px}.contact-grid span{display:block;color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:2px}.contact-grid strong{display:block;margin-top:5px;font-size:14px;word-break:break-word}.edit-note{font-size:12px;margin-top:25px!important;color:#697484!important}
+footer{text-align:center;padding:30px 7%;border-top:1px solid var(--line);color:#687384;font-size:12px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;place-items:center;padding:20px;z-index:50}.modal.show{display:grid}.modal-box{max-width:600px;width:100%;background:#0d1118;border:1px solid #303b49;border-radius:14px;padding:35px;position:relative}.modal-box h2{font:600 34px "Space Grotesk";margin:10px 0}.modal-box p:last-child{color:var(--muted)}.close{position:absolute;right:18px;top:14px;border:0;background:none;color:#aeb8c6;font-size:28px;cursor:pointer}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:850px){
+  .navbar{padding:0 5%}nav{display:none;position:absolute;top:76px;left:0;right:0;background:#080b10;border-bottom:1px solid var(--line);padding:20px 5%;flex-direction:column;gap:15px}nav.open{display:flex}.menu-btn{display:block}
+  .hero{grid-template-columns:1fr;padding:80px 5% 90px;gap:45px}.hero-card{max-width:600px}
+  .section{padding:80px 5%}.two-col{grid-template-columns:1fr;gap:15px}.skills-grid,.projects-grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  h1{letter-spacing:-3px}.hero-text{font-size:15px}.skills-grid,.projects-grid{grid-template-columns:1fr}.terminal-body{padding:20px;font-size:12px}.timeline{padding-left:25px}.timeline article:before{left:-32px}
+}
